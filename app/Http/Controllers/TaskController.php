@@ -37,14 +37,15 @@ class TaskController extends Controller
             $sortDirection
         );  
 
-        $categories = Category::all();
+        $categories = Category::select('id','name')->get();
 
         return view('tasks.index', compact('tasks', 'categories', 'filters', 'sortField', 'sortDirection'));
     }
 
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::select('id','name')->get();
+
         return view('tasks.create', compact('categories'));
     }
 
@@ -65,7 +66,7 @@ class TaskController extends Controller
 
     public function edit(Task $task)
     {    
-        $categories = Category::all();
+        $categories = Category::select('id','name')->get();
 
         return view('tasks.edit', compact('task', 'categories'));
     }
