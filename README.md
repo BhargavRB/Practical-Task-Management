@@ -4,8 +4,8 @@
 ### 1. Unzip the project files
 
 ```
-unzip laravel-crm.zip
-cd laravel-crm
+unzip Practical-Task-Management-master.zip
+cd Practical-Task-Management-master
 ```
 
 ### 2. Install PHP dependencies using Composer
